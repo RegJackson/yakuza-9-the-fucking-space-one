@@ -78,7 +78,7 @@
 	log_combat(attacker, defender, "launch strike (breacher knuckle)")
 	var/atom/throw_target = get_edge_target_turf(defender, attacker.dir)
 	defender.throw_at(throw_target, 3, 4, attacker)
-	defender.apply_damage(25, wound_bonus = 15, attacker.get_attack_type(), affecting)
+	defender.apply_damage(25, attacker.get_attack_type(), affecting, wound_bonus = 18)
 	return TRUE
 
 /datum/martial_art/breacher_knuckle/harm_act(mob/living/attacker, mob/living/defender)
